@@ -8,16 +8,16 @@ if (hasDriversLicense) console.log ('I can drive ;D');
 const interface = 'audio'; // o console vai mostrar que existe uma palavra reservada sendo usada no código erroneamente.*/
 
 //AHHHHHHHHHHHHH FUNCTIOOOOOOOOOONNNNNNNNNSSSSSSSSS MISERICÓRDIAAAAAAAAAAAAAA
- 
-/*function logger () { // function name
+ /*
+function logger () { // function name
 console.log ('My name is Paula');//function body - ação
 }
 // calling/running/invoking function
 logger (); //chamada
-logger (); //chamada*/
+logger (); //chamada
 
 
-/*
+
 function fruitProcessor(apples, oranges){  // fruitProcessor function name ***** apples and juices are the parâmeters that the processor needs to make a juice.
     const juice = `Juice with ${apples} apples and ${oranges} oranges`;
     return juice;
@@ -32,7 +32,7 @@ console.log(appleOrangeJuice);
 console.log(fruitProcessor(2,4));
 
 //ACHO QUE AGORA ENTENDI ESSA PORRAAAAAAAAAAAAAAAAAAAAAAAAA
- /*
+ 
  function parImp (n) {
     if (n % 2 === 0) {
         return 'par'
@@ -75,10 +75,10 @@ console.log(yearsUntilRetirement(1975,'Bob'));
 console.log(yearsUntilRetirement(1985,'Renan'));
 console.log(yearsUntilRetirement(1989,'Ana'));
 //
-*/
+
 
 // Functions calling other functions
-/*
+
 function cutFruitPieces(fruit) { // corta as frutas em 4 pedaços
     return fruit * 4;
 
@@ -94,8 +94,8 @@ function fruitProcessor(apples, oranges) {  // apples and juices are the paramet
     const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges`;
     return juice;
 }
-console.log(fruitProcessor(2, 3));*/
-/*
+console.log(fruitProcessor(2, 3));
+
 const calcAge = function (birthYear) {
     return 2037- birthYear;
 }
@@ -108,8 +108,8 @@ const yearsUntilRetirement = function (birthYear,firstName) { // more than one p
 }
 console.log (yearsUntilRetirement(1991,'Paula'));
 console.log (yearsUntilRetirement(1970,'Mike'));
-*/
-/*
+
+
 const calcAge = function (brithYeah) {
     return 2037 - brithYeah;
 }
@@ -130,3 +130,83 @@ const yearsUntilRetirement = function (brithYeah, firstName) {
 console.log (yearsUntilRetirement(1991,'Paula'));
 console.log (yearsUntilRetirement(1950,'Mike'));
 */
+
+
+//ARRAYS
+
+
+//constantes 
+const friend1 ='Paula';
+const friend2 ='José';
+const friend3 ='Renan';
+const friend4 ='Luiz';
+const friend5 ='Silvano'; // não muito prático
+
+console.log(friend1, friend2, friend3, friend4, friend5);
+
+const friends = ['Paula', 'José', 'Renan', 'Luiz', 'Roberta'];//uma maneira de fazer um array - mais usada
+console.log(friends);
+
+const friendsNew = new Array('Paula', 'José', 'Renan', 'Luiz', 'Silvano');// outra maneira de se fazer um array function
+console.log(friendsNew);
+
+console.log(friends[0]);//descobrir elemento da posição desejada
+console.log(friendsNew[3]);
+
+console.log(friendsNew.length);//quantos elementos tem no array
+console.log(friendsNew[friendsNew.length-1]);//pegar o penúltimo elemento do array
+friendsNew[1]= 'Jay';
+console.log(friendsNew);
+
+const firstName = 'Jonas'
+const jonas = ['firstName', 'Silva', 2037-1991,friendsNew];
+console.log(jonas);
+console.log(jonas.length);
+
+// exercise
+
+/*const calcAge = function (birthYear) {
+    return 2037- birthYear;
+}
+const years = [1990, 1967,2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3= calcAge(years[years.length-1]);
+
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]),calcAge(years[1]),calcAge(years[years.length -1])];
+console.log(ages);
+*/
+
+//add elements
+const colors = ['amarelo', 'azul', 'Verde', 'preto'];
+const newLenght = colors.push('violeta');
+console.log(colors);
+console.log(newLenght);
+
+colors.unshift ('rosa');// add as first element
+console.log(colors);
+
+
+//remove methods
+colors.pop();
+const popped = colors.pop();
+console.log(popped);
+console.log(colors);
+
+colors.shift ( );
+console.log(colors);
+
+console.log(colors.indexOf('azul'));//O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+
+console.log(colors.indexOf('purpura'));
+
+console.log(colors.includes('aul- petróleo'));// vê se tem o item no array- false or true
+console.log(colors.includes('amarelo'));
+
+
+
+
+
