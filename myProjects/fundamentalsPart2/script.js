@@ -206,7 +206,9 @@ console.log(colors.indexOf('purpura'));
 console.log(colors.includes('aul- petróleo'));// vê se tem o item no array- false or true
 console.log(colors.includes('amarelo'));
 
-
+if ((colors.includes('azul'))){
+    console.log('Você gosta da cor azul :D');
+}
 
 
 
