@@ -96,3 +96,5 @@ const yearsUntillRetirement = function (birthYeah,fisrtName) {
 }
 console.log(yearsUntillRetirement(1991, "Jonas"));
 
+
+
