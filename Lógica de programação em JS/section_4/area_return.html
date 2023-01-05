@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de prograação com Javascript- FUNÇÕES COM PARÂMETROS </title>
+</head>
+<body>
+    <H1>Lógica de prograação com Javascript- FUNÇÕES COM PARÂMETROS </H1>
+    <button onclick="mostrarAreaAlert()"> Mostrar área em um alert</button>
+    <button onclick="mostrarAreaOutput()"> Mostrar área no output</button>
+    <div id="output"></div>
+</body>
+    <script>
+
+        
+        function mostrarAreaAlert(){
+            var largura = prompt('Digite a largura: ');
+        largura= parseFloat(largura);
+
+        var altura = prompt('Digite a altura: ');
+        altura = parseFloat(altura);
+
+            var area = calcularArea(largura, altura);
+            window.alert('A área total é: ' + area);
+
+        }
+
+        function mostrarAreaOutput(){
+            var largura = prompt('Digite a largura: ');
+        largura= parseFloat(largura);
+
+        var altura = prompt('Digite a altura: ');
+        altura = parseFloat(altura);
+            var area = calcularArea(largura, altura);
+            document.querySelector('#output').innerHTML = 'a área total é : ' + area; 
+        }
+        
+        function calcularArea(l,a){
+            return  l * a  ;      
+                
+        }
+              
+
+    </script>
+
+    
+</html>

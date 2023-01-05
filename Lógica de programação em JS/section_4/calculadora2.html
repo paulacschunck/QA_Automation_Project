@@ -9,10 +9,10 @@
 <body>
     <h1>Lógica de programação com JavaScript- Calculadora</h1>
 
-    <button onclick="somar()"> + </button>
-    <button onclick="subtrair()"> - </button>
-    <button onclick="multiplicar()"> * </button>
-    <button onclick="dividir()"> / </button>
+    <button onclick="calcular('+')"> + </button>
+    <button onclick="calcular('-')"> - </button>
+    <button onclick="calcular('*')"> * </button>
+    <button onclick="calcular('/')"> / </button>
 
 
 
@@ -29,34 +29,28 @@
             output.innerHTML = n1;
         }
 
-        function somar() {
+        function calcular(sinal) {
             var n = prompt('Digite um número: ');
             n = parseFloat(n);
-            n1 += n;
+
+            switch(sinal) {
+                case '+':
+                    n1+=n;
+                    break;
+                case '-':
+                    n1-=n;
+                break;
+                    case '*':
+                    n1*=n;
+                    break;
+                case '/':
+                    n1/=n;                    
+            }
+            
             escreve();
         }
 
-        function subtrair() {
-            var n = prompt('Digite um número: '); 
-            n = parseFloat(n);
-            n1 -= n;
-            escreve();
-        }
-
-        function multiplicar() {
-            var n = prompt('Digite um número: ');
-            n = parseFloat(n);
-            n1 *= n;
-            escreve();
-        }
-
-        function dividir() {
-            var n = prompt('Digite um número: ');
-            n = parseFloat(n);
-            n1 /= n;
-            escreve();
-        }
-
+       
 
     </script>
     

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de prograação com Javascript- FUNÇÕES COM PARÂMETROS </title>
+</head>
+<body>
+    <H1>Lógica de prograação com Javascript- FUNÇÕES COM PARÂMETROS </H1>
+    <button onclick="calcularGasto(tanqueEmLitros, valorLitro)"> Custo do tanque cheio</button>
+</body>
+    <script>
+
+        var tanqueEmLitros = prompt('Digite a capacidade de armazenamento do tanque do seu carro: ');
+        tanqueEmLitros= parseFloat(tanqueEmLitros);
+
+        var valorLitro = prompt('Digite o valor do litro do combustível utilizado: ');
+        valorLitro = parseFloat(valorLitro);
+
+
+        function calcularGasto(t,v){
+            alert('recebendo parametro t:'+ t);
+            alert('recebendo parametro v:'+ v);
+            alert('Para encher o seu tanque com : '+ t + ' litros ' + ' você gastará  :  ' + (t* v) + ' reais. ');
+        }
+
+              
+
+    </script>
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    
+</html>
