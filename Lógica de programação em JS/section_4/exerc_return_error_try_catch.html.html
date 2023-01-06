@@ -31,7 +31,7 @@
             n2 = parseFloat(n2);// converte para float
 
             try {
-                var msg = calcular(simbolo, n1, n2)
+                var msg = calcular(simbolo, n1, n2);
             } catch (e) {
                 console.log(e)
             }
@@ -52,13 +52,11 @@
 
             if (simbolo !== '+' &&  simbolo !== '-' &&  simbolo !== '*' && simbolo !== '/'){
                     throw new Error('digite um símbolo válido');
-                    
-                }
+                                    }
 
-                if (isNaN(n1) || isNaN(n2) ){
+            if (isNaN(n1) || isNaN(n2) ){ // isnan informa se o parâmetro pode ser convertido para número, se sim, isnan vai ser false, se não é true.
                     throw new Error('digite um número válido');
-                    
-                    
+                                        
                 }
 
             var numeroCalculado = null;
