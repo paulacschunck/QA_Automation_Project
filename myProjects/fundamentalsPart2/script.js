@@ -94,7 +94,7 @@ function fruitProcessor(apples, oranges){
 
 }
 
-console.log(fruitProcessor(2,3));*/
+console.log(fruitProcessor(2,3));
 
    const calcAge = function (birthyear) {
     return 2037 - birthyear;
@@ -105,14 +105,35 @@ console.log(fruitProcessor(2,3));*/
     const retirement = 65 - age;
 
     if (retirement > 0) {      
-        console.log(`${firstName}`);  
+        console.log(`${firstName} retires in ${retirement} years`);  
         return retirement;
         
     } else {
-        console.log(`${firstName}`); 
+        console.log(`${firstName} has already retired`); 
         return -1;       
     }
     
 }
  console.log(yearsUntilRetirement(1981, 'Paula'));
  console.log(yearsUntilRetirement(1950, 'Lucia'));
+
+Function declaration:
+
+Function that can be used before it's declared.
+
+
+Function expression:
+
+Function value stored in a variable
+
+Arrow Function: 
+
+Great for a quick one-line functions.
+Has no keyword, sem return ... ( more later...)
+
+
+Function's functions : :D 
+receive input data, transfrom input data and then output data.
+
+*/
+
