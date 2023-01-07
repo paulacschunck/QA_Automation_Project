@@ -1,214 +1,118 @@
-'use strict';/* //cria erros visíveis e proíbe de executar certas coisas .
-/*let hasDriversLicense = false;
-const passTest = true;
-
-if (passTest) hasDriversLicense = true;
-if (hasDriversLicense) console.log ('I can drive ;D');
-
-const interface = 'audio'; // o console vai mostrar que existe uma palavra reservada sendo usada no código erroneamente.*/
-
-//AHHHHHHHHHHHHH FUNCTIOOOOOOOOOONNNNNNNNNSSSSSSSSS MISERICÓRDIAAAAAAAAAAAAAA
- /*
-function logger () { // function name
-console.log ('My name is Paula');//function body - ação
+'use strict';//deixa o código mais seguro e mais fácil de encontrar os bugs, pois proíbe de fazer algumas coisas que colaboram paa que algo dê errado. E mostra se você estiver usando palavbras reservadas.
+/*
+function logger (){
+     console.log('My name is Paula');
 }
-// calling/running/invoking function
-logger (); //chamada
-logger (); //chamada
 
+logger();
 
+//function declaration
 
-function fruitProcessor(apples, oranges){  // fruitProcessor function name ***** apples and juices are the parâmeters that the processor needs to make a juice.
-    const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+/*function fruitProcessor(apples, oranges){
+    console.log(apples, oranges);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
     return juice;
+
 }
 
-const resultJuice = fruitProcessor (8,0);// 8 apples e 0 oranges  ARMAZENANDO EM VARIÁVEL O RESULTADO QUANDO SE QUER UTILIZAR PARA ALGUM PROCESSO
-console.log (resultJuice);
-console.log(fruitProcessor (8,0)); // SOMENTE REGISTRANDO O RESULTADO, QUANDO NÃO SE DESEJA UTILIZAR O RESULTADO, SOMENTE MOSTRÁ-LO.
+const appleJuice = fruitProcessor(5,0);
+console.log(appleJuice);
+document.write(fruitProcessor(5,0));
+console.log(fruitProcessor(5,0));
 
-const appleOrangeJuice = fruitProcessor (2,4);
-console.log(appleOrangeJuice);
-console.log(fruitProcessor(2,4));
-
-//ACHO QUE AGORA ENTENDI ESSA PORRAAAAAAAAAAAAAAAAAAAAAAAAA
- 
- function parImp (n) {
-    if (n % 2 === 0) {
-        return 'par'
-    }else {
-        return 'impar'
-    }
- }
-
- const res = parImp (12);
- console.log(`This number is ${res}`);
- //ESTA FUNCÇÃO EU ENTENDI****
- 
-function calcAge1 (birthYear) {
-    return 2037 - birthYear;
+function calcAge1(birthyear){
+    const age1 = 2037- birthyear
+    return age1;
 }
- const age1 = calcAge1(1991);
- console.log(age1);
 
-//function expression
+console.log(calcAge1(1981));
+const age2 = calcAge2(1981);
+chamar aqui ou depois da função
 
-const calcAge2 = function (birthYear){ // (anonimous function)
-  6888  return 2022 - birthYear;
+function calcAge2(birthyear){ //function declaration: a função pode ser chamada antes da declaração da mesma.
+    return 2037-birthyear;
+}                                                       console.log(calcAge2(1981)); chamar aqui ou antes da criação da função.
+const age2 = calcAge2(1981);
+
+// anonimous function- função sem nome
+
+
+
+const calcAge2 = function (birthyear) {
+    return 2037-birthyear; // function expression
+    //só pode chamar depois da criação da expression.
 }
 const age2 = calcAge2(1981);
-console.log(age1,age2)
+console.log(calcAge2(1981));
+
+// utilizando function expression, o código fica mais organizado, pois primeiro se cria todas as funções do código, depois vai chamando erlas conforme precisar durante o código e armazena-se tudo em variáveis, fica mais bonito e de fácil manutenção e entendimento do código.
+
+// Assunto : Arrow function- utilizando a function expression anterior como exemplo
+
+const calcAge2 = function (birthyear) {
+    return 2037-birthyear;
+}
+const age2 = calcAge2(1981);
+console.log(calcAge2(1981));
 
 // arrow function
-const calcAge3 = birthYear =>2022-birthYear; // one parameter and one line of code tructure
+const calcAge3 = birthyear=> 2037-birthyear;
+
 const age3 = calcAge3(1981);
 console.log(age3);
 
-const yearsUntilRetirement = (birthYear,firstName)=> { // more than one parameter and more than one line fo code structure
-    const age = 2022-birthYear;
+//Arrow serve somente quando há apenas um parâmetros e pouco código dentro da função.
+
+const yearsUntilRetirement = (birthyear, firstName)=> {
+    const age = 2037-birthyear;
     const retirement = 65 - age;
-   // return retirement; // needs to use RETURN and curl brackets
-   return `${firstName} retires in ${retirement} years.`;
+
+    return `${firstName} retires in  ${retirement} years.`
 }
-console.log(yearsUntilRetirement(1981,'Paula'));
-console.log(yearsUntilRetirement(1975,'Bob'));
-console.log(yearsUntilRetirement(1985,'Renan'));
-console.log(yearsUntilRetirement(1989,'Ana'));
-//
+
+console.log(yearsUntilRetirement(1981, "Paula"));
+console.log(yearsUntilRetirement(1985, "Renan"));
+console.log(yearsUntilRetirement(2019, "Maze"));
 
 
-// Functions calling other functions
 
-function cutFruitPieces(fruit) { // corta as frutas em 4 pedaços
+//Functions calling other functions
+
+
+function cutFruitPieces(fruit){
     return fruit * 4;
-
 }
 
+function fruitProcessor(apples, oranges){
 
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
 
-
-function fruitProcessor(apples, oranges) {  // apples and juices are the parameters 
-    const applePieces = cutFruitPieces(apples);// function inside another function
-    const orangePieces = cutFruitPieces(oranges);// function inside another function
-
-    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges`;
+    console.log(apples, oranges);
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces}  pieces of orange, using ${apples} apples and ${oranges} oranges.`;
     return juice;
-}
-console.log(fruitProcessor(2, 3));
 
-const calcAge = function (birthYear) {
-    return 2037- birthYear;
 }
 
-const yearsUntilRetirement = function (birthYear,firstName) { // more than one parameter and more than one line fo code structure
-    const age = calcAge (birthYear);
-    const retirement = 65 - age;
-   // return retirement; // needs to use RETURN and curl brackets
-   //return `${firstName} retires in ${retirement} years.`;   
-}
-console.log (yearsUntilRetirement(1991,'Paula'));
-console.log (yearsUntilRetirement(1970,'Mike'));
+console.log(fruitProcessor(2,3));*/
 
+   const calcAge = function (birthyear) {
+    return 2037 - birthyear;
+   }
 
-const calcAge = function (brithYeah) {
-    return 2037 - brithYeah;
-}
-
-const yearsUntilRetirement = function (brithYeah, firstName) {
-    const age = calcAge (brithYeah);
+   const yearsUntilRetirement = function (birthyear, firstName){
+    const age = calcAge(birthyear);
     const retirement = 65 - age;
 
-    if (retirement >0){
-        console.log(`${firstName} retires in ${retirement} years!`);//para serem executadas ações dentro de uma função, esta deve estar escrita antes do return, senão elas serão ignoradas.
+    if (retirement > 0) {      
+        console.log(`${firstName}`);  
         return retirement;
+        
     } else {
-        console.log(`${firstName} has already retired ;D`); // alt+up sobe uma linha o código!!
-        return -1;
+        console.log(`${firstName}`); 
+        return -1;       
     }
-   
+    
 }
-console.log (yearsUntilRetirement(1991,'Paula'));
-console.log (yearsUntilRetirement(1950,'Mike'));
-*/
-
-
-//ARRAYS
-
-
-//constantes 
-const friend1 ='Paula';
-const friend2 ='José';
-const friend3 ='Renan';
-const friend4 ='Luiz';
-const friend5 ='Silvano'; // não muito prático
-
-console.log(friend1, friend2, friend3, friend4, friend5);
-
-const friends = ['Paula', 'José', 'Renan', 'Luiz', 'Roberta'];//uma maneira de fazer um array - mais usada
-console.log(friends);
-
-const friendsNew = new Array('Paula', 'José', 'Renan', 'Luiz', 'Silvano');// outra maneira de se fazer um array function
-console.log(friendsNew);
-
-console.log(friends[0]);//descobrir elemento da posição desejada
-console.log(friendsNew[3]);
-
-console.log(friendsNew.length);//quantos elementos tem no array
-console.log(friendsNew[friendsNew.length-1]);//pegar o penúltimo elemento do array
-friendsNew[1]= 'Jay';
-console.log(friendsNew);
-
-const firstName = 'Jonas'
-const jonas = ['firstName', 'Silva', 2037-1991,friendsNew];
-console.log(jonas);
-console.log(jonas.length);
-
-// exercise
-
-/*const calcAge = function (birthYear) {
-    return 2037- birthYear;
-}
-const years = [1990, 1967,2002, 2010, 2018];
-
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3= calcAge(years[years.length-1]);
-
-console.log(age1, age2, age3);
-
-const ages = [calcAge(years[0]),calcAge(years[1]),calcAge(years[years.length -1])];
-console.log(ages);
-*/
-
-//add elements
-const colors = ['amarelo', 'azul', 'Verde', 'preto'];
-const newLenght = colors.push('violeta');
-console.log(colors);
-console.log(newLenght);
-
-colors.unshift ('rosa');// add as first element
-console.log(colors);
-
-
-//remove methods
-colors.pop();
-const popped = colors.pop();
-console.log(popped);
-console.log(colors);
-
-colors.shift ( );
-console.log(colors);
-
-console.log(colors.indexOf('azul'));//O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
-
-console.log(colors.indexOf('purpura'));
-
-console.log(colors.includes('aul- petróleo'));// vê se tem o item no array- false or true
-console.log(colors.includes('amarelo'));
-
-if ((colors.includes('azul'))){
-    console.log('Você gosta da cor azul :D');
-}
-
-
-
+ console.log(yearsUntilRetirement(1981, 'Paula'));
+ console.log(yearsUntilRetirement(1950, 'Lucia'));
