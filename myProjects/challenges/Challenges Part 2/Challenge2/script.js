@@ -11,7 +11,7 @@ const gorjeta =(calcTip(billValue));
 console.log(`Para o valor de ${billValue} de conta, a gorjeta é de : ${gorjeta}`); 
 
 */
-
+/*
 
 document.getElementById("valor-calculado").style.display = "none";
 document.getElementById("each").style.display = "none";
@@ -45,4 +45,5 @@ function calculateDinner(){
 
 document.getElementById("calcular").onclick = function(){
     calculateDinner();
-}
+}*/
+
